@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>perspective</title>
+    <link rel="stylesheet" href="../css/086.css" />
+    <style>
+        html {
+            height: 100%;
+        }
+ 
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            background: #161e38;
+            -webkit-overflow-scrolling: touch;
+        }
+        .world {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px;
+        }
+        .stage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            transform-style: preserve-3d;
+        }
+        .house {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            transform-style: preserve-3d;
+            transform: translateZ(-500vw);
+        }
+        .wall {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fdd700;
+            opacity: 0.8;
+        }
+
+        .wall-opacity {
+            opacity: 0.8;
+            background-color: #fdd700;
+        }
+
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            font-size: 5em;
+        }
+        .house__wall--left {
+            width:1000vw;
+            transform: rotateY(90deg) translateZ(-500vw);
+        }
+        .house__wall--right {
+            width:1000vw;
+            transform: rotateY(90deg) translateZ(-400vw);
+        }
+        @keyframes upsize {
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(5);
+            }
+        }
+        .house__wall--front:hover{
+            animation: upsize 3s forwards;
+        }
+        h2 {
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="world">
+      <div class="stage">
+        <div class="house">
+          <div class="wall house__wall house__wall--left"></div>
+          <div class="wall house__wall house__wall--right"></div>
+          <div class="wall-opacity wall house__wall house__wall--front house__wall--front-a">
+            <div class="contents house__contents">
+              <h2 class="house__contents-title">
+                Hello!
+              </h2>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>

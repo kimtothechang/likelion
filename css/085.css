@@ -1,0 +1,31 @@
+@import "reset.css";
+
+.container {
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.왼쪽눈 {
+  fill: brown;
+}
+.오른쪽눈 {
+  fill: brown;
+}
+.안경 {
+  position: absolute;
+  top: 86px;
+  left: 133px;
+  width: 12px;
+  height: 10px;
+  background: brown;
+}
+/* 연습용 코드 */
+.연습 {
+  /* 기울임 */
+  transform: skew(30deg);
+  /* 크기 변환 */
+  transform: scale(2);
+  /* 이동 x축 y축  */
+  transform: translate(20px, 30px);
+  transform: scale(2) translate(20px, 30px);
+}
