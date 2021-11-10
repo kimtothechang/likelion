@@ -73,12 +73,25 @@
             width:1000vw;
             transform: rotateY(90deg) translateZ(-400vw);
         }
+        .house__wall--floor {
+            height: 1300vh;
+            transform: rotateX(90deg) translateZ(550vh) ;
+            background-color: seagreen;
+        }
+        .house__wall--ceil {
+            height: 1300vh;
+            transform: rotateX(90deg) translateZ(650vh);
+            background-color: seagreen;
+        }
+        .house__wall--front {
+            transform: translateZ(-500vw);
+        }
         @keyframes upsize {
             0%{
                 transform: scale(1);
             }
             100%{
-                transform: scale(5);
+                transform: scale(3);
             }
         }
         .house__wall--front:hover{
@@ -95,6 +108,7 @@
         <div class="house">
           <div class="wall house__wall house__wall--left"></div>
           <div class="wall house__wall house__wall--right"></div>
+          <div class="wall house__wall house__wall--floor"></div>
           <div class="wall-opacity wall house__wall house__wall--front house__wall--front-a">
             <div class="contents house__contents">
               <h2 class="house__contents-title">

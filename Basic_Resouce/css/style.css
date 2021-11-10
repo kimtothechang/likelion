@@ -1,0 +1,97 @@
+@import "reset.css";
+@import "10000hours.css";
+
+body {
+  background-color: #5b2386;
+  padding: 55px 272px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.title__bg {
+  opacity: 0.5;
+  width: 30%;
+}
+
+.title__img {
+  position: absolute;
+  top: 20%;
+  width: 80%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-mind-howlong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.quote {
+  border: 1px solid black;
+  color: #f5df4e;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: "OTEnjoystoriesBA";
+  margin-bottom: 34px;
+}
+
+.mind {
+  border: 1px solid black;
+  background-image: url("../img/quotes.png");
+  background-repeat: no-repeat;
+  font-family: "GmarketSansMedium";
+  line-height: 25px;
+  width: 488px;
+  height: 73px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.mind > strong {
+  font-family: "GmarketSansBold";
+  font-size: 150%;
+}
+
+.howlong-question {
+  color: white;
+  font-family: "GmarketSansMedium";
+  border: 1px solid black;
+}
+
+.howlong-question1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.howlong-question2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.howlong-question input {
+  width: 192px;
+  height: 49px;
+  border-radius: 10px;
+  outline: none;
+}
