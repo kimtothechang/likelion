@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #main {
+        background-color: #777;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+      }
+      .space {
+        width: 500px;
+        height: 600px;
+        border: 1px solid aqua;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: spin 10s linear;
+        position: relative;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+      .plane {
+        width: 200px;
+        height: 200px;
+        border: 1px solid salmon;
+        position: absolute;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotateY(0) translateZ(0px);
+        }
+        100% {
+          transform: rotateY(360deg) translateZ(-255px);
+        }
+      }
+      .card1 {
+        transform: rotateY(0deg) translateZ(-255px);
+      }
+      .card2 {
+        transform: rotateY(45deg) translateZ(-255px);
+      }
+      .card3 {
+        transform: rotateY(90deg) translateZ(-255px);
+      }
+      .card4 {
+        transform: rotateY(135deg) translateZ(-255px);
+      }
+      .card5 {
+        transform: rotateY(180deg) translateZ(-255px);
+      }
+      .card6 {
+        transform: rotateY(225deg) translateZ(-255px);
+      }
+      .card7 {
+        transform: rotateY(270deg) translateZ(-255px);
+      }
+      .card8 {
+        transform: rotateY(315deg) translateZ(-255px);
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <div class="space">
+        <div class="plane card1"></div>
+        <div class="plane card2"></div>
+        <div class="plane card3"></div>
+        <div class="plane card4"></div>
+        <div class="plane card5"></div>
+        <div class="plane card6"></div>
+        <div class="plane card7"></div>
+        <div class="plane card8"></div>
+      </div>
+    </main>
+  </body>
+</html>

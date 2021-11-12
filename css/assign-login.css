@@ -1,0 +1,92 @@
+@import "reset.css";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+#section__login {
+  width: 520px;
+  height: 712px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+header svg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+main h2 {
+  height: 60px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+.id-pw-login {
+  width: 472px;
+  height: 50px;
+}
+
+.id-pw-login:first-child {
+  margin-bottom: 10px;
+}
+
+.login-last {
+  display: flex;
+  margin: 15px 0px;
+}
+
+.join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 17px 0px;
+}
+
+.or {
+  display: flex;
+  width: 472px;
+  border-bottom: 2px solid red;
+}
+
+.or p {
+  display: flex;
+}
+
+.or p::before {
+  content: "";
+  border-bottom: 2px solid #c4c4c4;
+  width: 210px;
+}
+
+.or p::after {
+  content: "";
+  border-bottom: 2px solid #c4c4c4;
+  width: 210px;
+}
