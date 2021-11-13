@@ -9,7 +9,7 @@
   </head>
   <body>
     <main id="main">
-      <section class="space">
+      <section id="space">
         <article class="plane about">
           <div class="plane__card card_title">link</div>
           <div class="plane__card">1</div>
@@ -62,4 +62,17 @@
       </section>
     </main>
   </body>
+  <script type="text/javascript">
+    const space = document.querySelector("#space");
+    const plane = space.querySelectorAll("article");
+
+    for (let i = 0; i < plane.length; i++) {
+      plane[i].addEventListener("mouseenter", (e) => {
+        space.style.animationPlayState = "paused";
+      });
+      plane[i].addEventListener("mouseleave", (e) => {
+        space.style.animationPlayState = "running";
+      });
+    }
+  </script>
 </html>
