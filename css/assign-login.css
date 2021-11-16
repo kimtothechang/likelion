@@ -89,6 +89,7 @@ main form {
   color: #767676;
 }
 
+/* 체크박스 */
 .login-last input {
   position: absolute;
   height: 20px;
