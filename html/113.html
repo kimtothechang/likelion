@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Bin</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <style>
+      /* 버튼 디자인 */
+      .btn-select {
+        width: 200px;
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid #c4c4c4;
+        border-radius: 10px;
+        position: relative;
+        padding: 0px 16px 0px 14px;
+        margin-bottom: 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .on.btn-select {
+         border: 1px solid #9b51e0; 
+         box-shadow: 0px 0px 4px #9b51e0;
+      }
+
+      /* 버튼 클릭시 ul 보였다 안보였다 */
+      .list-member {
+        display: none;
+      }
+
+      .on + .list-member {
+        display: block;
+      }
+
+      /* 버튼 클릭시 svg 보였다 안보였다 */
+      svg:last-child {
+          display: none;
+      }
+
+      .on > svg:nth-child(2) {
+          display: none;
+      }
+
+      .on > svg:last-child {
+          display: block;
+      }
+
+      /* ul 디자인 */
+      .list-member {
+          width: 200px;
+          height: 208px;
+          border: 1px solid #c4c4c4;
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 4px 8px;
+      }
+
+      /* li 디자인 */
+      li button {
+          width: 180px;
+          height: 30px;
+          background-color: #fff;
+          border: none;
+          font-size: 14px;
+          font-weight: 400;
+          border-radius: 10px;
+          margin: 2.5px 0px;
+      }
+
+      li button:hover {
+          background-color: #F8E4FF;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>셀렉트 박스 만들기</h2>
+    <article class="cont-select">
+      <button class="btn-select">
+        <p>최애 프로그래밍 언어</p>
+        <svg
+          width="10"
+          height="6"
+          viewBox="0 0 10 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.75593 5.12713C5.35716 5.58759 4.64284 5.58759 4.24407 5.12713L1.23682 1.65465C0.675943 1.00701 1.136 -9.13358e-08 1.99275 -1.66235e-07L8.00725 -6.9204e-07C8.864 -7.6694e-07 9.32406 1.00701 8.76318 1.65465L5.75593 5.12713Z"
+            fill="#C4C4C4"
+          />
+        </svg class="">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.24407 0.872872C4.64284 0.41241 5.35716 0.41241 5.75593 0.872872L8.76318 4.34535C9.32406 4.99299 8.864 6 8.00725 6L1.99275 6C1.136 6 0.675943 4.99299 1.23682 4.34535L4.24407 0.872872Z" fill="#C4C4C4"/>
+            </svg>
+            
+      </button>
+      <ul class="list-member">
+        <li><button type="button">Python</button></li>
+        <li><button type="button">Java</button></li>
+        <li><button type="button">JavaScript</button></li>
+        <li><button type="button">C#</button></li>
+        <li><button type="button">C/C++</button></li>
+      </ul>
+    </article>
+
+    <script>
+      const btn = document.querySelector(".btn-select");
+      const list = document.querySelector(".list-member");
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("on");
+      });
+      list.addEventListener("click", (event) => {
+        if (event.target.nodeName === "BUTTON") {
+          btn.innerText = event.target.innerText;
+          btn.classList.remove("on");
+        }
+      });
+    </script>
+  </body>
+</html>
