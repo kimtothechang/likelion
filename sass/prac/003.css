@@ -1,0 +1,12 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: olive;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.box:hover {
+  background-color: tan;
+}
+/*# sourceMappingURL=003.css.map */
