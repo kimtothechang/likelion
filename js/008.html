@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>빙빙빙빙빙빙</title>
+    <style>
+      body {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 2000px;
+      }
+      .space {
+        position: relative;
+        transform-style: preserve-3d;
+        width: 500px;
+        height: 500px;
+        animation: spinY 10s infinite linear;
+      }
+      .face {
+        top: 0%;
+        left: 0%;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border: 2px solid tan;
+        border-radius: 200px;
+      }
+      .face1 {
+        transform: rotateY(0deg);
+      }
+      .face2 {
+        transform: rotateY(10deg);
+      }
+      .face3 {
+        transform: rotateY(20deg);
+      }
+      .face4 {
+        transform: rotateY(30deg);
+      }
+      .face5 {
+        transform: rotateY(40deg);
+      }
+      .face6 {
+        transform: rotateY(50deg);
+      }
+      .face7 {
+        transform: rotateY(60deg);
+      }
+      .face8 {
+        transform: rotateY(70deg);
+      }
+      .face9 {
+        transform: rotateY(80deg);
+      }
+      .face10 {
+        transform: rotateY(90deg);
+      }
+      .face11 {
+        transform: rotateY(100deg);
+      }
+      .face12 {
+        transform: rotateY(110deg);
+      }
+      .face13 {
+        transform: rotateY(120deg);
+      }
+      .face14 {
+        transform: rotateY(130deg);
+      }
+      .face15 {
+        transform: rotateY(140deg);
+      }
+      .face16 {
+        transform: rotateY(150deg);
+      }
+      .face17 {
+        transform: rotateY(160deg);
+      }
+      .face18 {
+        transform: rotateY(170deg);
+      }
+      .face19 {
+        transform: rotateY(180deg);
+      }
+      .face20 {
+        transform: rotateY(190deg);
+      }
+      .face21 {
+        transform: rotateY(200deg);
+      }
+      .face22 {
+        transform: rotateY(210deg);
+      }
+      .face23 {
+        transform: rotateY(220deg);
+      }
+      .face24 {
+        transform: rotateY(230deg);
+      }
+      .face25 {
+        transform: rotateY(240deg);
+      }
+      .face26 {
+        transform: rotateY(250deg);
+      }
+      .face27 {
+        transform: rotateY(260deg);
+      }
+      .face28 {
+        transform: rotateY(270deg);
+      }
+      .face29 {
+        transform: rotateY(280deg);
+      }
+      .face30 {
+        transform: rotateY(290deg);
+      }
+      .face31 {
+        transform: rotateY(300deg);
+      }
+      .face32 {
+        transform: rotateY(310deg);
+      }
+      .face33 {
+        transform: rotateY(320deg);
+      }
+      .face34 {
+        transform: rotateY(330deg);
+      }
+      .face35 {
+        transform: rotateY(340deg);
+      }
+      .face36 {
+        transform: rotateY(350deg);
+      }
+      @keyframes spinY {
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="face face1"></div>
+      <div class="face face2"></div>
+      <div class="face face3"></div>
+      <div class="face face4"></div>
+      <div class="face face5"></div>
+      <div class="face face6"></div>
+      <div class="face face7"></div>
+      <div class="face face8"></div>
+      <div class="face face9"></div>
+      <div class="face face10"></div>
+      <div class="face face11"></div>
+      <div class="face face12"></div>
+      <div class="face face13"></div>
+      <div class="face face14"></div>
+      <div class="face face15"></div>
+      <div class="face face16"></div>
+      <div class="face face17"></div>
+      <div class="face face18"></div>
+      <div class="face face19"></div>
+      <div class="face face20"></div>
+      <div class="face face21"></div>
+      <div class="face face22"></div>
+      <div class="face face23"></div>
+      <div class="face face24"></div>
+      <div class="face face25"></div>
+      <div class="face face26"></div>
+      <div class="face face27"></div>
+      <div class="face face28"></div>
+      <div class="face face29"></div>
+      <div class="face face30"></div>
+      <div class="face face31"></div>
+      <div class="face face32"></div>
+      <div class="face face33"></div>
+      <div class="face face34"></div>
+      <div class="face face35"></div>
+      <div class="face face36"></div>
+    </div>
+    <button class="btn1" style="background-color: salmon">salmon</button>
+    <button class="btn2" style="background-color: plum">plum</button>
+    <button class="btn3" style="background-color: cornflowerblue">
+      cornflowerblue
+    </button>
+
+    <script>
+      const salmonBtn = document.querySelector(".btn1");
+      const plumBtn = document.querySelector(".btn2");
+      const blueBtn = document.querySelector(".btn3");
+      const faces = document.querySelectorAll(".face");
+
+      let btnArr = [salmonBtn, plumBtn, blueBtn];
+      btnArr.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          if (item.className === "btn1") {
+            faces.forEach((face) => {
+              face.style.backgroundColor = "salmon";
+            });
+          } else if (item.className === "btn2") {
+            faces.forEach((face) => {
+              face.style.backgroundColor = "plum";
+            });
+          } else if (item.className === "btn3") {
+            faces.forEach((face) => {
+              face.style.backgroundColor = "cornflowerblue";
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
