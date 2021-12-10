@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select box</title>
+    <style>
+      .list-member {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="select__box">
+      <h4>where you wanna go</h4>
+      <div class="btn-select">naver</div>
+      <ul class="list-member">
+        <li>naver</li>
+        <li>kakao</li>
+        <li>line</li>
+        <li>coupang</li>
+        <li>woowahan</li>
+      </ul>
+    </div>
+    <script>
+      const btn = document.querySelector(".btn-select");
+      const ul = document.querySelector(".list-member");
+      const li = document.querySelectorAll(".list-member > li");
+      let onoff = false;
+
+      btn.addEventListener("click", (e) => {
+        ul.style.display = onoff ? "none" : "block";
+        onoff = onoff ? false : true;
+      });
+
+      li.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          btn.innerText = item.innerText;
+          ul.style.display = "none";
+          onoff = false;
+        });
+      });
+    </script>
+  </body>
+</html>
